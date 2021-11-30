@@ -1,0 +1,32 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int divisors(int n){
+    int c =0;
+    int i;
+    for(i=1;i<sqrt(n);i++){
+        if (n%i==0){
+            c = c+2;
+        }
+        
+    }
+    
+    if (i*i==n){
+        c=c+1;
+    }
+        
+
+    
+    return c;
+}
+
+
+
+int main() {
+ 
+  cout << divisors(30);
+
+  return 0;
+}
