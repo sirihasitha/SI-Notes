@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int checkbit(int n,int i){
+    if ((n >> i) % 2 == 1){
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    if (checkbit(10,3) == 1){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+    return 0;
+}
