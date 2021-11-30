@@ -1,0 +1,15 @@
+//Generate a number with x consecutive 1's and 4 consecutive 0's
+
+
+
+#include <iostream>
+using namespace std;
+int generate(int x,int y){
+    
+    return ((1<<x) - 1)<<y ;
+}
+
+int main(){
+    cout<<generate(4,3);
+    return 0;
+}
