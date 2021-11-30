@@ -1,0 +1,13 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int powerof2(int n){
+    return 1<<n;
+}
+
+int main() {
+  cout << powerof2(5);
+  return 0;
+}
