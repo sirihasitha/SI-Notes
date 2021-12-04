@@ -1,0 +1,19 @@
+24 = 24,48,72,96
+36 = 36,72,108
+chec the least common multiple
+
+so if we can take multiples of 36 and check if they are divisible by both 24 and 36 we can arrive at the solution
+
+def lcm(a,b):
+    if a>b:
+        high = a
+    if b>a:
+        high = b
+    value = high
+    while True:
+        if high % a== 0 and high% b==0:
+            return high
+        else:
+            high+=value
+    
+print(lcm(24,36))
