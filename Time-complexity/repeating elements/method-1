@@ -1,0 +1,5 @@
+n = [1,1,2,3,3]
+s = n[0]
+for i in range(1,len(n)):
+    s ^= n[i]
+print(s)
