@@ -1,0 +1,9 @@
+def apown(a,n):
+    ans = 1
+    x = a
+    while n>0:
+        if n&1==1:
+            ans= (ans * x) % (1000000007)
+        x = (x*x) %(1000000007) 
+        n=n>>1
+    return ans
