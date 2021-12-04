@@ -1,0 +1,2 @@
+diff = ((n + 2) * (n + 1)) // 2 - sum(ls)
+    print(diff)
