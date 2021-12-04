@@ -1,0 +1,16 @@
+//USing Euclids algorithm
+64, 48
+64 = 48 * x + r
+64 = 48 * 1 + 16
+48 = 16 * 3 + 0
+16 = 0 -> when we get 0 in this place the lhs will be called as gcd
+
+//import math
+print(math.gcd(62,48))
+
+def gcd(a,b):
+    if b == 0:
+        return a
+    return gcd(b,a%b)
+    
+print(gcd(62,48))
