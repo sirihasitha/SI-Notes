@@ -1,0 +1,4 @@
+diff = ((n + 2) * (n + 1)) // 2 - sum(ls)
+    print(diff)
+    
+But this can also cause overflow problems
