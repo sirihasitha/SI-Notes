@@ -1,1 +1,28 @@
-
+def bs(a):
+    c=0
+    for i in range(len(a)):
+        for j in range(len(a)-1):
+            if a[j] > a[j+1]:
+                a[j],a[j+1] = a[j+1],a[j]
+    return a
+         
+def mege2array(l):
+    y = []
+    for i in range(len(l)):
+        y.append(l[i])
+    
+    for i in range(len(b)):
+        y.append(b[i])
+        
+    print(bs(y))
+    
+    
+    
+    
+time : copy a and b into another array -> O(m) + O(n)
+       soerting -> O(m+n) ** 2 (bublesort)
+       O(m) + O(n) + O(m+n)
+       
+space: O(m) + O(n)
+       
+       
