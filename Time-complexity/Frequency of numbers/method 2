@@ -1,0 +1,7 @@
+n = [1,2,3,2,3,2,1,4,5,56,6,7,6]
+dict = {}
+for i in n:
+    if i in dict:
+        dict[i] += 1
+    else:
+        dict[i] = 1
