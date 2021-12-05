@@ -1,1 +1,23 @@
 
+we take two arrays to compare
+
+
+L = [1,6,7,20]
+M = [3,5,8,11]
+
+if i will be less than j then inc i.
+else inc count by no of elements present towards the right of i and inc j.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+i = j = k = 0
+c= 0
+while i<len(L) and j<len(M):
+    if L[i] < M[j]:
+        i+=1            
+    else:
+        
+        c+= len(L[i:])
+        print(c)
+        j+=1
+            
+print(c)
