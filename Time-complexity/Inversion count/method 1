@@ -1,0 +1,11 @@
+condition: i<j
+           arr[i] > arr[j]
+l = [9,6,8,4]
+c=0
+for i in range(len(l)):
+  for j in range(i+1,len(l)):
+    if l[i] > l[j]:
+      c+=1
+print(c)
+
+t:O(n**2)
