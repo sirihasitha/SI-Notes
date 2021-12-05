@@ -1,0 +1,5 @@
+for i in range 0 to n:
+  for j in range i+1 to n:
+      for k in range j+! to n:
+         if a[i] + a[j] + a[k] == k
+            return i,j,k
