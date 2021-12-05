@@ -1,0 +1,22 @@
+m = [1,5,9,10,15,20]
+n = [2,3,8,13]
+
+for i in range(len(n)-1,-1,-1):
+    j = len(m) - 2
+    last = m[-1]
+    while j >= 0 and n[i] < m[j]:
+        m[j+1] = m[j]
+        j-=1
+    if j != m[-2] or last > n[i]:
+        m[j+1] = n[i]
+        n[i] = last
+        
+print(m)
+print(n)
+
+
+time : sorting - > O(m*n)
+       copying into one array and printing -> O(n)
+       
+       
+sc:O(1)
