@@ -1,0 +1,13 @@
+l = [2,3,2,1,1,1,0,1,1,1]
+n = [0 for i in range (max(l)+1)]
+
+print(max(l))
+
+for i in range(len(l)):
+    n[l[i]] += 1
+print(n)
+
+
+disadv:
+1) Wont work for negative numbers
+2) count array can be too large
