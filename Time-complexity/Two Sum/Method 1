@@ -13,3 +13,13 @@ while p1<p2:
     else:
         print (p1,p2)
         break
+        
+        
+        
+        
+        
+ Time: Nlog(N) -> sorting
+       N -> searching elements
+       Nlog(N) + N
+       
+ space: N
