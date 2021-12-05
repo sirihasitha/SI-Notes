@@ -1,1 +1,22 @@
+https://www.youtube.com/watch?v=onLoX6Nhvmg
 
+
+use dictionary and find frequency of each element
+use two pointers i and j:
+
+for i=0 to i-1:
+  //remove the element from hash/dictionary
+  dict[a[i]] --
+  for j=0 to n-1:
+      dict[a[j]] -- 
+          
+          if -(a+b) in dict:
+              return a,b,c
+       
+       dict[a[j]] ++
+   dict[a[i]] ++ 
+   
+------------------------------------------------------------------------------------------------------
+      
+       
+ time complexity = O(N**2 + logN)
