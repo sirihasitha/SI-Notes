@@ -1,0 +1,41 @@
+def leftmost(arr,low,high,q):
+    
+    ans = 0
+    while low <= high:
+        mid = (low +high) // 2
+        if arr[mid] == q:
+            ans = mid
+            high = mid - 1
+        elif arr[mid] < q:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return ans
+    
+    
+def rightmost(arr,low,high,q):
+    
+    ans = 0
+    while low <= high:
+        mid = (low +high) // 2
+        if arr[mid] == q:
+            ans = mid
+            low = mid + 1
+        elif arr[mid] < q:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return ans
+    
+
+print(rightmost(l,0,len(l) - 1,4) - leftmost(l,0,len(l) - 1,4))
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+TC: merge sort -> nlogn
+    leftmost -> logn
+    rightmost -> logn
+    so for q queries -> (logn + logn) * Q
+   ans = nlogn + (logn+logn)*q
+
+sc:N
