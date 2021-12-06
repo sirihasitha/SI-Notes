@@ -1,6 +1,8 @@
 
+ 
 def threesum(l,k):
-    for i in range(0,len(l)):
+    l.sort()
+    for i in range(len(l)-2):
         p1 = i+1
         p2 = len(l) - 1
         while p1<p2:
@@ -10,5 +12,6 @@ def threesum(l,k):
                 p2-=1
 
             else:
+    
                 return "true"
     return "false"
