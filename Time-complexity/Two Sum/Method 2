@@ -1,0 +1,13 @@
+l = [1,2,4,6,8,10,15,18]
+k = 18
+p1 = 0
+p2 = len(l) - 1
+while p1<p2:
+    if l[p1] + l[p2] < k:
+        p1+=1
+    elif l[p1] + l[p2] > k:
+        p2-=1
+        
+    else:
+        print (p1,p2)
+        break
