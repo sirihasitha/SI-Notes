@@ -1,0 +1,20 @@
+low = 1
+high = 36
+n = 36
+
+while low <= high:
+    mid = (low +high) // 2
+    if mid * mid == n:
+        print(mid)
+        break
+    elif mid * mid > n:
+        high = mid - 1
+        
+    else:
+        low = mid + 1
+        
+        
+        
+        
+Tc: logN
+sc:1
