@@ -1,0 +1,28 @@
+def cuberoot(n):
+    low = 1
+    flag = 0
+    if n<0:
+        n= n*-1
+        flag = 1
+    high = n
+    while low <= high:
+        mid = (low +high) // 2
+        if mid * mid * mid == n:
+            if flag == 1:
+                return (-1*mid)
+            else:
+                return mid
+        elif mid * mid * mid > n:
+            high = mid - 1
+
+        else:
+            low = mid + 1
+    if n>0:
+        return m
+    else:
+        return -m
+            
+            
+for i in range(int(input())):
+    n = int(input())
+    print(cuberoot(n))
