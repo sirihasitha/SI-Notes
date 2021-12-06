@@ -1,0 +1,14 @@
+
+def threesum(l,k):
+    for i in range(0,len(l)):
+        p1 = i+1
+        p2 = len(l) - 1
+        while p1<p2:
+            if l[p1] + l[p2] < k-l[i]:
+                p1+=1
+            elif l[p1] + l[p2] > k-l[i]:
+                p2-=1
+
+            else:
+                return "true"
+    return "false"
