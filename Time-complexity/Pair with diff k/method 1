@@ -1,0 +1,11 @@
+def diff(l,k):
+    dict={}
+    for i in l:
+        if i in dict:
+            dict[i] += 1
+        else:
+            dict[i] = 1
+    for i in dict:
+        if k+i in dict:
+            return "true"
+    return "false"
