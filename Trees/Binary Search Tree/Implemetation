@@ -1,0 +1,117 @@
+class BinarySearchTree:
+    def __init__(self,data):
+        self.data = data
+        self.right = None
+        self.left = None
+        
+    def add_child(self,data):
+        if data == self.data:
+            return
+        
+        if data < self.data:
+            if self.left:
+                return self.left.add_child(data)
+            else:
+                self.left =  BinarySearchTree(data)
+                
+        else:
+            if self.right:
+                return self.right.add_child(data)
+            else:
+                self.right =  BinarySearchTree(data)
+                
+                
+    def inorder_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.inorder_traversal()
+            
+        elements.append(self.data)
+        
+        if self.right:
+            elements += self.right.inorder_traversal()
+        
+        return elements
+        
+        
+    def preorder_traversal(self):
+        elements = []
+        
+        elements.append(self.data)
+        
+        if self.left:
+            elements += self.left.inorder_traversal()
+            
+        if self.right:
+            elements += self.right.inorder_traversal()
+            
+        return elements
+        
+    
+    def postorder_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.inorder_traversal()
+            
+        if self.right:
+            elements += self.right.inorder_traversal()
+            
+        elements.append(self.data)
+        
+        
+        
+        return elements
+        
+    
+        
+        
+    def search(self,data):
+        if data == self.data:
+            return True
+        
+        if data < self.data:
+            if self.left:
+                return self.left.search(data)
+            else:
+                return False
+                
+        else:
+            if self.right:
+                return self.right.search(data)
+            else:
+                return False
+                
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        
+        return self.left.find_min()
+        
+            
+            
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        
+        return self.right.find_max()
+        
+        
+            
+        
+        
+def build_tree(lst):
+    root = BinarySearchTree(lst[0])
+    
+    for i in range(1,len(lst)):
+        root.add_child(lst[i])
+    
+    return root
+
+
+if __name__ == "__main__":
+    nu = [7,97,43,4,5,1,3,76]
+    tree = build_tree(nu)
+    print(tree.preorder_traversal())
+    print(tree.search(9))
+    print(tree.find_max())
+    print(tree.find_min())
