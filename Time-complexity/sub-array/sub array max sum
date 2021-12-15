@@ -1,0 +1,11 @@
+def subArray(arr, n):
+    maxsum = -1000
+    # Pick starting point
+    for i in range(0,n):
+        su = 0
+        for j in range(i,n):
+            su += arr[j]
+        maxsum = max( maxsum,su)
+    return maxsum
+        
+print(subArray([-5,4,6,-3,4,-1],6))
