@@ -1,6 +1,0 @@
-naive approach:
-fix 0th element and calculate sum for all the sub arrays
-so we will have (n)*(n-1) / 2 iterations
-hence making it 
-
-time complexity O(nsquare)
