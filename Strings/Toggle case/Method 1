@@ -1,0 +1,13 @@
+A 65 1000001 a 97:1100001
+B 66 1000010 b 98 1100010
+
+the right most after 1st set bit should be set or unset depending on if it is set or not
+
+
+def toggleCase(a):
+ 
+    for i in range(len(a)):
+ 
+        # Bitwise EXOR with 32
+        a = a[:i] + chr(ord(a[i]) ^ 32) + a[i + 1:];
+    return a;
