@@ -1,0 +1,19 @@
+def cs(arr,n):
+    ans = 0
+    
+    for i in range(n):
+        max1 = 0
+        min1 = 100000
+        for j in range(i,  n):
+            max1 = max(max1,arr[j])
+            min1 = min(min1,arr[j])
+            print(max1,min1)
+            if ((j-i)+1) == max1-min1+1:
+                
+                
+                ans= max(ans,max1-min1+1);
+                print(ans)
+        
+    return ans
+
+print(cs([10,9,5,7,8,6,20,22,21,18,17],11))
