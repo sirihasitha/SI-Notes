@@ -1,0 +1,25 @@
+
+def nds(arr,n):
+    c = 0
+    for i in range(2**n):
+        if cs(arr,n,i):
+            c += 1
+    return c
+
+def cs(arr,n,i):
+    p = -1000
+    for j in range(n):
+        if checkbit(i,j):
+            if arr[j] < p:
+                return False
+            else:
+                p = arr[j]
+    return  True
+    
+def checkbit(n,i):
+    if (n >> i) % 2 == 1:
+        return True
+    else:
+        return False
+        
+print(nds([3,10,8,15,-4,9,12,18,15],9))
