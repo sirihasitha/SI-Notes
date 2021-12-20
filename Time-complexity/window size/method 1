@@ -8,7 +8,7 @@ def countDistinct(arr, k, n):
         if mp[arr[i]] == 0: 
             dist_count += 1
         mp[arr[i]] += 1
-        
+    //Print count of first window
     print(dist_count) 
 
     for i in range(k, n): 
