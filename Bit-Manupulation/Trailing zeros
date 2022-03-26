@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : integer
+    # @return an integer
+    def solve(self, A):
+        y = []
+        while A>=1:
+            y.append(A%2)
+            A = A//2
+        
+        t = 0
+        for i in y:
+            if i == 0:
+                t+=1
+            else:
+                break
+        return t
