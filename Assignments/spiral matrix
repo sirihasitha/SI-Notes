@@ -1,0 +1,47 @@
+def spiral(matrix):
+    dir = 0
+    top = 0
+    left = 0
+    right = len(matrix[0])-1
+    down = len(matrix)-1
+    y = []
+    while top<=down and left<=right:
+        
+        if dir == 0:
+            for i in range(left,right+1):
+                y.append(matrix[top][i])
+                print(matrix[top][i],end=" ")
+            top += 1
+
+        elif dir == 1:
+            for i in range(top,down+1):
+                y.append(matrix[i][right])
+                print(matrix[i][right],end=" ")
+            right -= 1
+
+        elif dir == 2:
+            for i in range(right,left-1,-1):
+                y.append(matrix[down][i])
+                print(matrix[down][i],end=" ")
+            down -= 1
+
+        elif dir == 3:
+            for i in range(down,top-1,-1):
+                y.append(matrix[i][left])
+                print(matrix[i][left],end=" ")
+            left+=1
+
+        dir = (dir+1) % 4
+            
+    
+si = int(input())
+for tc in range(1,si+1):
+    t = int(input())
+    z = []
+
+    for i in range(t):
+        l = list(map(int,input().split()))
+        z.append(l)
+    spiral(z)
+    print()
+    
