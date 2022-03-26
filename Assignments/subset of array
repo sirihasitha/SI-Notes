@@ -1,0 +1,29 @@
+def checkbit(n,i):
+    return (n>>i & 1 == 1)
+    
+    
+def subset(arr):
+    z =[]
+    for i in range(1,1<<len(arr)):
+        y = []
+        su =0 
+        for j in range(31):
+            if checkbit(i,j):
+                y.append(arr[j])
+        z.append(y)
+    
+    
+    z = sorted(z)
+    for i in range(len(z)):
+        j = len(z[i])
+        for k in range(j):
+            print(z[i][k],end=" ")
+        print()
+    print()
+
+
+
+for i in range(int(input())):
+    n = int(input())
+    l = list(map(int,input().split()))
+    subset(sorted(l))
