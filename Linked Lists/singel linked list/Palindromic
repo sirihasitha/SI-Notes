@@ -1,0 +1,53 @@
+# Definition for singly-linked list.
+# class ListNode:
+#	def __init__(self, x):
+#		self.val = x
+#		self.next = None
+
+class Solution:
+	# @param A : head node of linked list
+	# @return an integer
+	def lPalin(self, A):
+        mid = self.findMid(A)
+        sh = mid.next
+        mid.next = None
+        rev = self.reverse(sh)
+        while A != None and rev != None:
+            if A.val != rev.val:
+                return 0
+            else:
+                A = A.next
+                rev = rev.next
+
+        return 1
+
+    def join(self,A,B):
+        thead = A
+        while A != None and B != None:
+            temp = A.next
+            A.next = B
+            A = A.next
+            B = temp
+        return thead
+
+    def findMid(self,A):
+        s = A
+        f = A
+        while f.next != None and f.next.next != None:
+            s = s.next
+            f = f.next.next
+        return s
+
+    def reverse(self,A):
+        p = ListNode(None)
+        while A != None:
+            t = A.next
+            A.next = p
+            p = A
+            A = t
+
+            if p.next.val == None:
+                p.next = None
+        if p.val == None:
+            p = None
+        return p
