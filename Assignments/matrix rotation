@@ -1,0 +1,25 @@
+def pattern(n,z):
+    y=[]
+    for i in range(n):
+        q=[]
+        for j in range(n):
+            q.append(z[j][i])
+        y.append(q)
+
+    a = [s[::-1] for s in y]
+
+    for i in range(n):
+        for j in range(n):
+            print(a[i][j],end = " ")
+        print()
+
+si = int(input())
+for tc in range(1,si+1):
+    t = int(input())
+    z = []
+
+    for i in range(t):
+        l = list(map(int,input().split()))
+        z.append(l)
+    print("Test Case #{}:".format(tc))
+    pattern(t,z)
