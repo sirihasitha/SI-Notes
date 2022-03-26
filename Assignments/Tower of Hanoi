@@ -1,0 +1,14 @@
+def TowerOfHanoi(n , source, destination, auxiliary):
+    
+    if n==1:
+        print ("Move 1 from",source,"to",destination)
+        return 
+    TowerOfHanoi(n-1, source, auxiliary, destination)
+    
+    print ("Move",n,"from",source,"to",destination)
+    TowerOfHanoi(n-1, auxiliary, destination, source)
+
+for i in range(int(input())):
+    n = int(input())
+    print(2**n - 1)
+    TowerOfHanoi(n,"A","C","B")
