@@ -51,3 +51,5 @@ class Solution:
         if p.val == None:
             p = None
         return p
+
+s
