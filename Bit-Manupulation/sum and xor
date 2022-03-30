@@ -1,0 +1,29 @@
+method 1
+
+for i in range(int(input())):
+    n = int(input())
+    count = 0
+    for i in range(1,n+1):
+        if n+i == n^i:
+            count += 1
+            
+    print(count)
+    
+method 2
+
+import math
+
+def unsetbits(n):
+    c =0 
+    while n>0:
+        if n & 1 == 0:
+            c+=1
+        n = n>>1
+    return c
+
+
+
+for i in range(int(input())):
+    n = int(input())
+    print((1<<unsetbits(n))-1)
+    
