@@ -9,3 +9,14 @@ class Solution:
         res = y[::-1]
 
         return sum([res[i] * 2**i for i in range(len(res))])
+        
+        
+def reverse(A):
+    y = []
+    while A>0:
+        y.append(A%2)
+        A = A//2
+    z = [y[i] * (2 ** i) for i in range(len(y)) ]
+    return z[::-1]
+    
+print(reverse(15))
