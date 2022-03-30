@@ -1,1 +1,18 @@
 //Number of bits to be flipped to convert a to b
+
+a = 146
+b = 137
+def solve(A):
+    y = []
+    while A>=1:
+        y.append(A%2)
+        A = A//2
+    return y
+
+a = solve(a)
+b = solve(b)
+count = 0
+for i,j in zip(a,b):
+    if i^j == 1:
+        count += 1
+print(count)
