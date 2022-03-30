@@ -1,0 +1,28 @@
+def checkbit(n,i):
+    return (n>>i & 1 == 1)
+
+def countbit(n):
+    c = 0
+    while n>0:
+        n = n & n-1
+        c += 1
+    return c
+        
+    
+def subset(arr,k):
+    z =[]
+    for i in range(1,1<<len(arr)):
+        y = []
+        su =0 
+        if countbit(i) == k:
+            for j in range(31):
+                if checkbit(i,j):
+                    y.append(arr[j])
+            z.append(y)
+            print(y)
+
+for i in range(int(input())):
+    n = int(input())
+    k = int(input())
+    l = list(map(int,input().split()))
+    subset(sorted(l),k)
