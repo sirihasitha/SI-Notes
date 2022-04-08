@@ -8,7 +8,7 @@ def ascend(n):
 def binarysearch(n,key):
     strt =  0
     end = len(n) - 1
-    while strt<end:
+    while strt<=end:
         
         mid = strt + (end -strt) //2
         if n[mid] >= key and n[mid-1] < key :
