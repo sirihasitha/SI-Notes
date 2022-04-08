@@ -1,0 +1,22 @@
+n = [1,2,3,5,6,4,3,2]
+    
+def binarysearch(n):
+    strt =  0
+    end = len(n) - 1
+    maxi = n[0]
+        
+    while strt<=end:
+        
+        mid = strt + (end -strt) //2
+        if n[mid] < maxi:
+            end = mid -1
+            
+
+        elif maxi<n[mid] and n[mid] < n[mid+1]:
+            maxi = n[mid]
+            strt = mid +1
+         
+        else:
+            return n[mid]
+        
+print(binarysearch(n))
