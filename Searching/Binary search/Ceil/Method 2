@@ -1,6 +1,6 @@
 
 n = [2,3,5,9,14,16,18]
-key = 15
+key = 30
 
 
 def ascend(n):
@@ -9,7 +9,11 @@ def ascend(n):
 def binarysearch(n,key):
     strt =  0
     end = len(n) - 1
+    if key > n[-1]:
+        return -1
+        
     while strt<=end:
+    
         
         mid = strt + (end -strt) //2
         if n[mid] == key:
@@ -29,11 +33,7 @@ def binarysearch(n,key):
             else:
                 strt = mid + 1
 
-    return n[mid]
+    return n[strt]
         
 
 print(binarysearch(n,key))
-                
-            
-            
-   
