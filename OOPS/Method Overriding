@@ -1,0 +1,33 @@
+import math
+
+class Shape():
+    def __init__(self,name):
+        self.name = name
+        
+    def area(self):
+        pass
+        
+    def details(self):
+        print("my shape is ", self.name)
+
+class Square(Shape):
+    def __init__(self,length):
+        self.length = length
+        Shape.__init__(self,"square")
+    
+    def area(self):
+        print(self.length*self.length)
+        
+class Circle(Shape):
+    def __init__(self,rad):
+        self.rad = rad
+        Shape.__init__(self,"circle")
+    
+    def area(self):
+        print(math.pi*self.rad*self.rad)
+        
+a = Circle(4)
+b = Square(4)
+b.area()
+a.area()
+b.details()
