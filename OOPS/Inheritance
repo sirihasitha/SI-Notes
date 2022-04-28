@@ -1,0 +1,20 @@
+class Person:
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+        
+    def display(self):
+        print(self.name)
+        print(self.id)
+        
+class Employee(Person):
+    def __init__(self,name,id,pname):
+        self.pname = pname
+        Person.__init__(self,name,id)
+    
+    def display(self):
+        print(self.name)
+        print(self.pname)
+        
+a = Employee("siri",1293,"Madhavi")
+a.display()     
