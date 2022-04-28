@@ -1,0 +1,10 @@
+class Test:
+    def printhello(self, name = None):
+        if name is None:
+            print("Hello")
+        else:
+            print("Hello", name)
+            
+a = Test()
+a.printhello()
+a.printhello("siri")
