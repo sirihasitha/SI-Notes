@@ -1,0 +1,12 @@
+stack = [float("-inf")]
+a = [4,17,21,26,13,8,11,3,10,21]
+b = [0] * len(a)
+for i in range(len(a)-1,-1,-1):
+    while a[i] < stack[-1]:
+        stack.pop()
+    
+    b[i] = stack[-1]
+    stack.append(a[i])
+    print(stack)
+    
+print(b)
