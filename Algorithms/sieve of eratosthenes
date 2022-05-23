@@ -1,0 +1,14 @@
+a = 40
+ba = [True] * (a+1)
+start = 2
+ba[0] = False
+ba[1] = False
+y = []
+while start < len(ba):
+    if ba[start] == True:
+        beg = start
+        y.append(beg)
+    for i in range(beg*2,len(ba),beg):
+        ba[i] = False
+    start += 1
+print(y)
