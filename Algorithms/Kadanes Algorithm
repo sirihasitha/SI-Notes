@@ -1,0 +1,21 @@
+a = [-2,-3,4,-1,-2,1,5,-3]
+start = 0
+end = 0
+tot = 0
+temp = 0
+maxi = 0
+while start < len(a) and end < len(a) and temp < len(a):
+    tot += a[temp]
+    if tot < 0:
+        start += 1
+        tot = 0
+        
+    maxi = max(maxi,tot)
+    if tot == maxi:
+        end = temp
+    
+    temp+=1
+    
+
+print(a[start:end])
+        
